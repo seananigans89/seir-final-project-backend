@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.contrib.auth import get_user_model
 
@@ -6,7 +7,7 @@ from django.contrib.auth import get_user_model
 class Item(models.Model):
   brand = models.CharField(max_length=100)
   model = models.CharField(max_length=100)
-  serial_number = models.CharField(max_length=100)
+  serial_number = models.CharField(max_length=100, null=True)
   quantity = models.IntegerField(default=1)
   owner = models.ForeignKey(
       get_user_model(),
