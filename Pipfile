@@ -9,6 +9,8 @@ djangorestframework = "*"
 psycopg2 = "*"
 pytz = "*"
 typing-extensions = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
