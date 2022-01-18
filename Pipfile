@@ -11,6 +11,7 @@ pytz = "*"
 typing-extensions = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 
