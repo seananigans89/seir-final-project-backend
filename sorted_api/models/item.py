@@ -9,6 +9,7 @@ class Item(models.Model):
   model = models.CharField(max_length=100, blank=True)
   serial_number = models.CharField(max_length=100, blank=True)
   quantity = models.IntegerField(default=1)
+  category =  models.CharField(max_length=100)
   owner = models.ForeignKey(
       get_user_model(),
       on_delete=models.CASCADE
