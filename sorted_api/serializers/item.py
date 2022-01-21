@@ -5,5 +5,5 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         
-        fields = ('id', 'brand', 'model', 'serial_number', 'quantity', 'owner')
+        fields = ('id', 'brand', 'model', 'serial_number', 'quantity', 'category', 'owner')
 
