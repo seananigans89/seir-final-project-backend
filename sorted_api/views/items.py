@@ -9,11 +9,16 @@ from ..models.item import Item
 class ItemsView(APIView):
     def post(self, request):
         # Add the user id as owner
+        print(request.data)
         request.data['owner'] = request.user.id
+        print(request.data)
         item = ItemSerializer(data=request.data)
+        print(item)
         if not item.is_valid():
+            print('4')  
             return Response(item.errors, status=status.HTTP_400_BAD_REQUEST)
         item.save()
+        print('5')
         return Response(item.data, status=status.HTTP_201_CREATED)  
 
     def get(self, request):
