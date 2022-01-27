@@ -13,6 +13,7 @@ class ItemsView(APIView):
         item = ItemSerializer(data=request.data)
         if not item.is_valid():
             return Response(item.errors, status=status.HTTP_400_BAD_REQUEST)
+        print(item)
         item.save()
         return Response(item.data, status=status.HTTP_201_CREATED)  
 
