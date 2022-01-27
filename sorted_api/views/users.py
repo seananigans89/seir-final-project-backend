@@ -31,10 +31,9 @@ class SignIn(generics.CreateAPIView):
 
     def post(self, request):
         data = request.data['user']
-        print(data['email'])
         # use django authenticate to verify password and email match
         user = authenticate(request, email=data['email'], password=data['password'])
-        print(user)
+        print(user, 'is now logged in!')
         # Is our user is successfully authenticated...
         if user is not None:  
             login(request, user)
